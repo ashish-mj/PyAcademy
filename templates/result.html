@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>PyAcademy</title>
+    <link rel="stylesheet" href="../static/css/grid.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/result.css">
+    <link rel="icon" href="../static/images/logo.png" type="image/jpg">
+  </head>
+  <body>
+    <header>
+        <div class="row">
+            <img alt="pyacademy" class="logo" src="../static/images/logo.png">
+            <h1>PyAcademy</h1>
+            <a href="{{url_for('/pyacademy_course_home')}}" class="button">Home</a>
+        </div>
+        <div class="row">
+            <h1 class="tagline">Learn. Apply. Grow.</h1>
+        </div>
+            {% for item in data %}
+            <div class="card">
+                  <a href={{ item._source.url}}  target="_blank"><img src= "../static/images/learn.jpg" alt="Course Image" style="width:100%"></a>
+                  <h2>{{ item._source.courseName}}</h2>
+                  <h3>Author - {{ item._source.author}}</h3>
+                  <p class="price">Length - {{ item._source.duration}} mins</p>
+                  <p>{{ item._source.description}}</p>
+                  </br>
+            </div>
+
+            {% endfor %}
+</header>
+  </body>
+</html>

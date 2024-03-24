@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>PyAcademy</title>
+    <link rel="stylesheet" href="../static/css/grid.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="icon" href="../static/images/logo.png" type="image/jpg">
+  </head>
+  <body>
+    <header>
+        <div class="row">
+            <img alt="logo" class="logo" src="../static/images/logo.png">
+            <h1>PyAcademy</h1>
+        </div>
+        <div class="row">
+            <h1 class="tagline">Learn. Apply. Grow.</h1>
+        </div>
+        <form action="{{url_for('/pyacademy_course_home')}}" class="searchCourse-form" method="post">
+            <div class="row">
+                <div class="col span-2-of-5">
+                    <input type="text" name="courseName" id="courseName" placeholder="Search the course" required>
+                </div>
+                <div class="col span-3-of-5">
+                    <input type="submit" value="Search">
+                </div>
+            </div>
+        </form>
+    </header>
+  </body>
+</html>

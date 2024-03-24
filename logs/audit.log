@@ -1,0 +1,660 @@
+11:43:40,652 root DEBUG Connecting to Elastic DB
+11:43:40,735 root INFO Connection to Elastic DB Successfull
+11:43:40,735 root DEBUG Application Started ...
+11:43:40,762 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+11:43:40,762 werkzeug INFO [33mPress CTRL+C to quit[0m
+11:43:40,763 werkzeug INFO  * Restarting with stat
+11:43:41,354 root DEBUG Connecting to Elastic DB
+11:43:41,403 root INFO Connection to Elastic DB Successfull
+11:43:41,403 root DEBUG Application Started ...
+11:43:41,412 werkzeug WARNING  * Debugger is active!
+11:43:41,667 werkzeug INFO  * Debugger PIN: 100-133-871
+11:45:46,376 root INFO Rendering the Home Page
+11:45:46,391 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:45:46] "GET /pyacademy/home HTTP/1.1" 200 -
+11:45:46,468 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:45:46] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+11:45:46,469 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:45:46] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+11:45:46,471 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:45:46] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+11:45:46,481 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:45:46] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+11:46:38,980 root INFO Searching for the requested course
+11:46:38,983 root INFO python
+11:46:38,983 root INFO Searching for the word python
+11:46:38,985 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): localhost:9200
+11:46:39,434 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+11:46:39,435 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.451s]
+11:46:39,436 root INFO Searching for the word python is Successfull
+11:46:39,436 root INFO [{'_index': 'search-courses', '_id': 'CR0005', '_score': 0.7359309, '_source': {'courseName': 'Logging in Python', 'courseId': 'CR0005', 'url': 'https://blog.devgenius.io/logging-in-python-adec94519755', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of logging and create a simple project that documents every event into a log file and later use this log file to analyze the errors.', 'id': 'ee83e71b-0ed3-4ec3-abdd-a91e0ff681f3', 'createdAt': '24/03/2024 01:48:17'}}, {'_index': 'search-courses', '_id': 'CR0011', '_score': 0.65585554, '_source': {'courseName': 'Build Microservices with Python', 'courseId': 'CR0011', 'url': 'https://blog.devgenius.io/build-microservices-with-python-63fd35fa3baa', 'duration': 90, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Microservices based architecture and learn how to build microservices with Python', 'id': 'ed256e05-cee1-4763-acbf-fe73c0fba9ad', 'createdAt': '24/03/2024 01:56:25'}}, {'_index': 'search-courses', '_id': 'CR0006', '_score': 0.5914959, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0006', 'url': 'https://blog.devgenius.io/getting-started-with-flask-python-cbdeca3dcfe', 'duration': 60, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of flask and create a simple web application.', 'id': '749b9ae2-be1e-49ce-ae9a-c49140ff76eb', 'createdAt': '24/03/2024 01:49:44'}}, {'_index': 'search-courses', '_id': 'CR0008', '_score': 0.53863883, '_source': {'courseName': 'Containerize a Python Application using Docker', 'courseId': 'CR0008', 'url': 'https://blog.devgenius.io/containerize-a-python-application-using-docker-f8cea56568dd', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of docker and learn how to build an image that runs a Python application in a container.', 'id': 'dbfede8a-65da-429e-9f0b-e1436355bfeb', 'createdAt': '24/03/2024 01:52:07'}}, {'_index': 'search-courses', '_id': 'CR0003', '_score': 0.0910362, '_source': {'courseName': 'Kafka with Python', 'courseId': 'CR0003', 'url': 'https://blog.devgenius.io/kafka-with-python-4eb017b41e83', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the core concepts of Apache Kafka and write simple producer and consumer programs using python', 'id': 'd2995295-aa25-48fc-94a4-dfc50c149636', 'createdAt': '24/03/2024 01:44:05'}}, {'_index': 'search-courses', '_id': 'CR0004', '_score': 0.0910362, '_source': {'courseName': 'YAML with Python', 'courseId': 'CR0004', 'url': 'https://blog.devgenius.io/yaml-with-python-d6787a9bd8ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of YAML and write a simple python script that reads configuration details from a YAML file', 'id': 'daa57560-19d3-40ec-9126-507285643deb', 'createdAt': '24/03/2024 01:45:44'}}, {'_index': 'search-courses', '_id': 'CR0013', '_score': 0.08006308, '_source': {'courseName': 'Implementing gRPC In Python', 'courseId': 'CR0013', 'url': 'https://ashishmj.medium.com/implementing-grpc-in-python-51dd6be87ec3', 'duration': 70, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of gRPC and create a simple project by building endpoints using gRPC', 'id': 'fa387a6c-aabc-4dbd-956c-ac0756009178', 'createdAt': '24/03/2024 01:58:34'}}, {'_index': 'search-courses', '_id': 'CR0007', '_score': 0.07145072, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0007', 'url': 'https://blog.devgenius.io/rest-apis-with-python-f330c7ffc6ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of REST architecture and create a simple project by building REST APIs using flask', 'id': '4e55924c-49fc-4ef7-8874-0e03359753a4', 'createdAt': '24/03/2024 01:50:46'}}, {'_index': 'search-courses', '_id': 'CR0009', '_score': 0.07145072, '_source': {'courseName': 'Deploy Python App into Kubernetes', 'courseId': 'CR0009', 'url': 'https://blog.devgenius.io/deploy-python-app-into-kubernetes-4e783dbad320', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Kubernetes/K8s and learn how to deploy a simple python service into Kubernetes', 'id': '9c1e2adb-449d-41f7-a7d9-40ec2fa6009f', 'createdAt': '24/03/2024 01:53:40'}}, {'_index': 'search-courses', '_id': 'CR0010', '_score': 0.054018468, '_source': {'courseName': 'Implement CI / CD using Jenkins for Python Application', 'courseId': 'CR0010', 'url': 'https://blog.devgenius.io/implement-ci-cd-using-jenkins-for-python-application-91a3bcf7d91', 'duration': 45, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Jenkins and learn how to implement Continuous Integration / Continuous Delivery using Jenkins for a Python application', 'id': 'c7f68187-c42b-4e2c-8d09-df1e7bc043e5', 'createdAt': '24/03/2024 01:54:51'}}]
+11:46:39,442 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:39] "POST /pyacademy/home HTTP/1.1" 200 -
+11:46:39,456 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:39] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+11:46:39,461 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:39] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+11:46:39,462 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:39] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+11:46:39,464 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+11:46:39,469 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:39] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+11:46:44,641 root INFO Rendering the Home Page
+11:46:44,642 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:44] "GET /pyacademy/home HTTP/1.1" 200 -
+11:46:44,663 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:44] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+11:46:44,663 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+11:46:44,664 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:44] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+11:46:49,406 root INFO Searching for the requested course
+11:46:49,407 root INFO image
+11:46:49,407 root INFO Searching for the word image
+11:46:49,414 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+11:46:49,415 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.008s]
+11:46:49,415 root INFO Searching for the word image is Successfull
+11:46:49,415 root INFO [{'_index': 'search-courses', '_id': 'CR0001', '_score': 1.4385734, '_source': {'courseName': 'Image Editor Web Application using OpenCV', 'courseId': 'CR0001', 'url': 'https://blog.devgenius.io/snaplab-an-image-editor-web-application-59a6ec36e7e', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Computer vision is a field of study that deals with how computers can gain high-level understanding from digital images or videos', 'id': '85dc64d5-f866-4cc6-ab55-a2e2ad6e0d0a', 'createdAt': '24/03/2024 01:38:26'}}]
+11:46:49,416 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:49] "POST /pyacademy/home HTTP/1.1" 200 -
+11:46:49,430 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:49] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+11:46:49,431 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:49] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+11:46:49,436 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:49] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+11:46:49,436 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:49] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+11:46:53,699 root INFO Rendering the Home Page
+11:46:53,700 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:53] "GET /pyacademy/home HTTP/1.1" 200 -
+11:46:53,714 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:53] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+11:46:53,714 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:53] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+11:46:53,715 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:46:53] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+11:47:15,484 root INFO Searching for the requested course
+11:47:15,485 root INFO with
+11:47:15,485 root INFO Searching for the word with
+11:47:15,490 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+11:47:15,491 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.006s]
+11:47:15,491 root INFO Searching for the word with is Successfull
+11:47:15,491 root INFO []
+11:47:15,491 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:15] "POST /pyacademy/home HTTP/1.1" 200 -
+11:47:15,505 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:15] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+11:47:15,506 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:15] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+11:47:15,508 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:15] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+11:47:15,517 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:15] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+11:47:17,793 root INFO Rendering the Home Page
+11:47:17,795 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:17] "GET /pyacademy/home HTTP/1.1" 200 -
+11:47:17,813 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:17] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+11:47:17,814 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:17] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+11:47:17,815 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:17] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+11:47:25,501 root INFO Searching for the requested course
+11:47:25,523 root INFO using
+11:47:25,523 root INFO Searching for the word using
+11:47:25,532 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+11:47:25,533 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.009s]
+11:47:25,533 root INFO Searching for the word using is Successfull
+11:47:25,533 root INFO [{'_index': 'search-courses', '_id': 'CR0010', '_score': 1.1228547, '_source': {'courseName': 'Implement CI / CD using Jenkins for Python Application', 'courseId': 'CR0010', 'url': 'https://blog.devgenius.io/implement-ci-cd-using-jenkins-for-python-application-91a3bcf7d91', 'duration': 45, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Jenkins and learn how to implement Continuous Integration / Continuous Delivery using Jenkins for a Python application', 'id': 'c7f68187-c42b-4e2c-8d09-df1e7bc043e5', 'createdAt': '24/03/2024 01:54:51'}}, {'_index': 'search-courses', '_id': 'CR0008', '_score': 0.77391195, '_source': {'courseName': 'Containerize a Python Application using Docker', 'courseId': 'CR0008', 'url': 'https://blog.devgenius.io/containerize-a-python-application-using-docker-f8cea56568dd', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of docker and learn how to build an image that runs a Python application in a container.', 'id': 'dbfede8a-65da-429e-9f0b-e1436355bfeb', 'createdAt': '24/03/2024 01:52:07'}}, {'_index': 'search-courses', '_id': 'CR0001', '_score': 0.7104268, '_source': {'courseName': 'Image Editor Web Application using OpenCV', 'courseId': 'CR0001', 'url': 'https://blog.devgenius.io/snaplab-an-image-editor-web-application-59a6ec36e7e', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Computer vision is a field of study that deals with how computers can gain high-level understanding from digital images or videos', 'id': '85dc64d5-f866-4cc6-ab55-a2e2ad6e0d0a', 'createdAt': '24/03/2024 01:38:26'}}, {'_index': 'search-courses', '_id': 'CR0012', '_score': 0.7104268, '_source': {'courseName': 'REST APIs in Go using Gorilla Mux', 'courseId': 'CR0012', 'url': 'https://blog.devgenius.io/rest-apis-in-go-using-gorilla-mux-01fab932c5a0', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of REST architecture and create a simple project by building REST APIs using Gorilla mux', 'id': '3764a101-894a-4447-9689-9ad136ab3801', 'createdAt': '24/03/2024 01:57:29'}}]
+11:47:25,534 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:25] "POST /pyacademy/home HTTP/1.1" 200 -
+11:47:25,551 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:25] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+11:47:25,555 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:25] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+11:47:25,556 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:25] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+11:47:25,556 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:25] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+11:47:30,865 root INFO Rendering the Home Page
+11:47:30,867 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:30] "GET /pyacademy/home HTTP/1.1" 200 -
+11:47:30,885 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:30] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+11:47:30,885 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:30] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+11:47:30,886 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 11:47:30] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+12:14:25,258 root INFO Rendering the Home Page
+12:14:25,262 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:25] "GET /pyacademy/home HTTP/1.1" 200 -
+12:14:25,285 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:25] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+12:14:25,289 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:25] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:14:25,290 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:25] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:14:25,342 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:25] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:14:25,342 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:25] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+12:14:28,299 root INFO Rendering the Home Page
+12:14:28,300 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:28] "GET /pyacademy/home HTTP/1.1" 200 -
+12:14:28,318 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:28] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:14:28,319 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:28] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+12:14:28,321 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:14:28,328 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:14:41,966 root INFO Searching for the requested course
+12:14:41,966 root INFO python
+12:14:41,967 root INFO Searching for the word python
+12:14:41,980 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+12:14:41,981 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.012s]
+12:14:41,982 root INFO Searching for the word python is Successfull
+12:14:41,982 root INFO [{'_index': 'search-courses', '_id': 'CR0005', '_score': 0.7359309, '_source': {'courseName': 'Logging in Python', 'courseId': 'CR0005', 'url': 'https://blog.devgenius.io/logging-in-python-adec94519755', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of logging and create a simple project that documents every event into a log file and later use this log file to analyze the errors.', 'id': 'ee83e71b-0ed3-4ec3-abdd-a91e0ff681f3', 'createdAt': '24/03/2024 01:48:17'}}, {'_index': 'search-courses', '_id': 'CR0011', '_score': 0.65585554, '_source': {'courseName': 'Build Microservices with Python', 'courseId': 'CR0011', 'url': 'https://blog.devgenius.io/build-microservices-with-python-63fd35fa3baa', 'duration': 90, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Microservices based architecture and learn how to build microservices with Python', 'id': 'ed256e05-cee1-4763-acbf-fe73c0fba9ad', 'createdAt': '24/03/2024 01:56:25'}}, {'_index': 'search-courses', '_id': 'CR0006', '_score': 0.5914959, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0006', 'url': 'https://blog.devgenius.io/getting-started-with-flask-python-cbdeca3dcfe', 'duration': 60, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of flask and create a simple web application.', 'id': '749b9ae2-be1e-49ce-ae9a-c49140ff76eb', 'createdAt': '24/03/2024 01:49:44'}}, {'_index': 'search-courses', '_id': 'CR0008', '_score': 0.53863883, '_source': {'courseName': 'Containerize a Python Application using Docker', 'courseId': 'CR0008', 'url': 'https://blog.devgenius.io/containerize-a-python-application-using-docker-f8cea56568dd', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of docker and learn how to build an image that runs a Python application in a container.', 'id': 'dbfede8a-65da-429e-9f0b-e1436355bfeb', 'createdAt': '24/03/2024 01:52:07'}}, {'_index': 'search-courses', '_id': 'CR0003', '_score': 0.0910362, '_source': {'courseName': 'Kafka with Python', 'courseId': 'CR0003', 'url': 'https://blog.devgenius.io/kafka-with-python-4eb017b41e83', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the core concepts of Apache Kafka and write simple producer and consumer programs using python', 'id': 'd2995295-aa25-48fc-94a4-dfc50c149636', 'createdAt': '24/03/2024 01:44:05'}}, {'_index': 'search-courses', '_id': 'CR0004', '_score': 0.0910362, '_source': {'courseName': 'YAML with Python', 'courseId': 'CR0004', 'url': 'https://blog.devgenius.io/yaml-with-python-d6787a9bd8ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of YAML and write a simple python script that reads configuration details from a YAML file', 'id': 'daa57560-19d3-40ec-9126-507285643deb', 'createdAt': '24/03/2024 01:45:44'}}, {'_index': 'search-courses', '_id': 'CR0013', '_score': 0.08006308, '_source': {'courseName': 'Implementing gRPC In Python', 'courseId': 'CR0013', 'url': 'https://ashishmj.medium.com/implementing-grpc-in-python-51dd6be87ec3', 'duration': 70, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of gRPC and create a simple project by building endpoints using gRPC', 'id': 'fa387a6c-aabc-4dbd-956c-ac0756009178', 'createdAt': '24/03/2024 01:58:34'}}, {'_index': 'search-courses', '_id': 'CR0007', '_score': 0.07145072, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0007', 'url': 'https://blog.devgenius.io/rest-apis-with-python-f330c7ffc6ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of REST architecture and create a simple project by building REST APIs using flask', 'id': '4e55924c-49fc-4ef7-8874-0e03359753a4', 'createdAt': '24/03/2024 01:50:46'}}, {'_index': 'search-courses', '_id': 'CR0009', '_score': 0.07145072, '_source': {'courseName': 'Deploy Python App into Kubernetes', 'courseId': 'CR0009', 'url': 'https://blog.devgenius.io/deploy-python-app-into-kubernetes-4e783dbad320', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Kubernetes/K8s and learn how to deploy a simple python service into Kubernetes', 'id': '9c1e2adb-449d-41f7-a7d9-40ec2fa6009f', 'createdAt': '24/03/2024 01:53:40'}}, {'_index': 'search-courses', '_id': 'CR0010', '_score': 0.054018468, '_source': {'courseName': 'Implement CI / CD using Jenkins for Python Application', 'courseId': 'CR0010', 'url': 'https://blog.devgenius.io/implement-ci-cd-using-jenkins-for-python-application-91a3bcf7d91', 'duration': 45, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Jenkins and learn how to implement Continuous Integration / Continuous Delivery using Jenkins for a Python application', 'id': 'c7f68187-c42b-4e2c-8d09-df1e7bc043e5', 'createdAt': '24/03/2024 01:54:51'}}]
+12:14:41,984 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:41] "POST /pyacademy/home HTTP/1.1" 200 -
+12:14:42,0 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:42] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:14:42,3 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:42] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:14:42,8 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:42] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+12:14:42,9 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:42] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+12:14:42,15 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:42] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+12:14:44,241 root INFO Rendering the Home Page
+12:14:44,242 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:44] "GET /pyacademy/home HTTP/1.1" 200 -
+12:14:44,260 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:44] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:14:44,261 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:44] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+12:14:44,268 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:14:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:45:18,947 root DEBUG Connecting to Elastic DB
+12:45:19,16 root INFO Connection to Elastic DB Successfull
+12:45:19,16 root DEBUG Application Started ...
+12:45:28,253 root DEBUG Connecting to Elastic DB
+12:45:28,302 root INFO Connection to Elastic DB Successfull
+12:45:28,302 root DEBUG Application Started ...
+12:45:28,315 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+12:45:28,315 werkzeug INFO [33mPress CTRL+C to quit[0m
+12:45:28,317 werkzeug INFO  * Restarting with stat
+12:45:28,976 root DEBUG Connecting to Elastic DB
+12:45:29,29 root INFO Connection to Elastic DB Successfull
+12:45:29,29 root DEBUG Application Started ...
+12:45:29,39 werkzeug WARNING  * Debugger is active!
+12:45:29,52 werkzeug INFO  * Debugger PIN: 100-133-871
+12:52:47,863 root INFO Searching for the requested course
+12:52:47,871 root INFO python
+12:52:47,871 root INFO Searching for the word python
+12:52:47,875 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): localhost:9200
+12:52:48,29 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+12:52:48,30 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.157s]
+12:52:48,31 root INFO Searching for the word python is Successfull
+12:52:48,31 root INFO [{'_index': 'search-courses', '_id': 'CR0005', '_score': 0.7359309, '_source': {'courseName': 'Logging in Python', 'courseId': 'CR0005', 'url': 'https://blog.devgenius.io/logging-in-python-adec94519755', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of logging and create a simple project that documents every event into a log file and later use this log file to analyze the errors.', 'id': 'ee83e71b-0ed3-4ec3-abdd-a91e0ff681f3', 'createdAt': '24/03/2024 01:48:17'}}, {'_index': 'search-courses', '_id': 'CR0011', '_score': 0.65585554, '_source': {'courseName': 'Build Microservices with Python', 'courseId': 'CR0011', 'url': 'https://blog.devgenius.io/build-microservices-with-python-63fd35fa3baa', 'duration': 90, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Microservices based architecture and learn how to build microservices with Python', 'id': 'ed256e05-cee1-4763-acbf-fe73c0fba9ad', 'createdAt': '24/03/2024 01:56:25'}}, {'_index': 'search-courses', '_id': 'CR0006', '_score': 0.5914959, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0006', 'url': 'https://blog.devgenius.io/getting-started-with-flask-python-cbdeca3dcfe', 'duration': 60, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of flask and create a simple web application.', 'id': '749b9ae2-be1e-49ce-ae9a-c49140ff76eb', 'createdAt': '24/03/2024 01:49:44'}}, {'_index': 'search-courses', '_id': 'CR0008', '_score': 0.53863883, '_source': {'courseName': 'Containerize a Python Application using Docker', 'courseId': 'CR0008', 'url': 'https://blog.devgenius.io/containerize-a-python-application-using-docker-f8cea56568dd', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of docker and learn how to build an image that runs a Python application in a container.', 'id': 'dbfede8a-65da-429e-9f0b-e1436355bfeb', 'createdAt': '24/03/2024 01:52:07'}}, {'_index': 'search-courses', '_id': 'CR0003', '_score': 0.0910362, '_source': {'courseName': 'Kafka with Python', 'courseId': 'CR0003', 'url': 'https://blog.devgenius.io/kafka-with-python-4eb017b41e83', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the core concepts of Apache Kafka and write simple producer and consumer programs using python', 'id': 'd2995295-aa25-48fc-94a4-dfc50c149636', 'createdAt': '24/03/2024 01:44:05'}}, {'_index': 'search-courses', '_id': 'CR0004', '_score': 0.0910362, '_source': {'courseName': 'YAML with Python', 'courseId': 'CR0004', 'url': 'https://blog.devgenius.io/yaml-with-python-d6787a9bd8ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of YAML and write a simple python script that reads configuration details from a YAML file', 'id': 'daa57560-19d3-40ec-9126-507285643deb', 'createdAt': '24/03/2024 01:45:44'}}, {'_index': 'search-courses', '_id': 'CR0013', '_score': 0.08006308, '_source': {'courseName': 'Implementing gRPC In Python', 'courseId': 'CR0013', 'url': 'https://ashishmj.medium.com/implementing-grpc-in-python-51dd6be87ec3', 'duration': 70, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of gRPC and create a simple project by building endpoints using gRPC', 'id': 'fa387a6c-aabc-4dbd-956c-ac0756009178', 'createdAt': '24/03/2024 01:58:34'}}, {'_index': 'search-courses', '_id': 'CR0007', '_score': 0.07145072, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0007', 'url': 'https://blog.devgenius.io/rest-apis-with-python-f330c7ffc6ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of REST architecture and create a simple project by building REST APIs using flask', 'id': '4e55924c-49fc-4ef7-8874-0e03359753a4', 'createdAt': '24/03/2024 01:50:46'}}, {'_index': 'search-courses', '_id': 'CR0009', '_score': 0.07145072, '_source': {'courseName': 'Deploy Python App into Kubernetes', 'courseId': 'CR0009', 'url': 'https://blog.devgenius.io/deploy-python-app-into-kubernetes-4e783dbad320', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Kubernetes/K8s and learn how to deploy a simple python service into Kubernetes', 'id': '9c1e2adb-449d-41f7-a7d9-40ec2fa6009f', 'createdAt': '24/03/2024 01:53:40'}}, {'_index': 'search-courses', '_id': 'CR0010', '_score': 0.054018468, '_source': {'courseName': 'Implement CI / CD using Jenkins for Python Application', 'courseId': 'CR0010', 'url': 'https://blog.devgenius.io/implement-ci-cd-using-jenkins-for-python-application-91a3bcf7d91', 'duration': 45, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Jenkins and learn how to implement Continuous Integration / Continuous Delivery using Jenkins for a Python application', 'id': 'c7f68187-c42b-4e2c-8d09-df1e7bc043e5', 'createdAt': '24/03/2024 01:54:51'}}]
+12:52:48,46 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:52:48] "POST /pyacademy/home HTTP/1.1" 200 -
+12:52:48,86 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:52:48] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:52:48,89 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:52:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:52:48,94 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:52:48] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+12:52:48,95 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:52:48] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+12:52:48,101 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:52:48] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+12:52:59,413 root INFO Rendering the Home Page
+12:52:59,419 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:52:59] "GET /pyacademy/home HTTP/1.1" 200 -
+12:52:59,436 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:52:59] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:52:59,438 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:52:59] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:52:59,439 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:52:59] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+12:52:59,447 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:52:59] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+12:53:07,633 root INFO Searching for the requested course
+12:53:07,634 root INFO log
+12:53:07,634 root INFO Searching for the word log
+12:53:07,639 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+12:53:07,658 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.024s]
+12:53:07,658 root INFO Searching for the word log is Successfull
+12:53:07,659 root INFO []
+12:53:07,659 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:07] "POST /pyacademy/home HTTP/1.1" 200 -
+12:53:07,673 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:07] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:53:07,676 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:07] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+12:53:07,677 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:07] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:53:10,197 root INFO Rendering the Home Page
+12:53:10,205 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:10] "GET /pyacademy/home HTTP/1.1" 200 -
+12:53:10,221 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:10] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+12:53:10,222 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:10] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:53:10,223 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:10] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:53:14,854 root INFO Searching for the requested course
+12:53:14,864 root INFO logging
+12:53:14,864 root INFO Searching for the word logging
+12:53:14,871 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+12:53:14,872 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.007s]
+12:53:14,872 root INFO Searching for the word logging is Successfull
+12:53:14,872 root INFO [{'_index': 'search-courses', '_id': 'CR0005', '_score': 2.1411328, '_source': {'courseName': 'Logging in Python', 'courseId': 'CR0005', 'url': 'https://blog.devgenius.io/logging-in-python-adec94519755', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of logging and create a simple project that documents every event into a log file and later use this log file to analyze the errors.', 'id': 'ee83e71b-0ed3-4ec3-abdd-a91e0ff681f3', 'createdAt': '24/03/2024 01:48:17'}}]
+12:53:14,873 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:14] "POST /pyacademy/home HTTP/1.1" 200 -
+12:53:14,889 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:14] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+12:53:14,890 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:14] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:53:14,892 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:14] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:53:14,895 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:14] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+12:53:23,912 root INFO Rendering the Home Page
+12:53:23,913 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:23] "GET /pyacademy/home HTTP/1.1" 200 -
+12:53:23,936 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:23] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+12:53:23,937 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:23] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:53:23,939 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:23] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:53:23,945 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:23] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+12:53:26,871 root INFO Searching for the requested course
+12:53:26,871 root INFO In
+12:53:26,871 root INFO Searching for the word In
+12:53:26,874 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+12:53:26,875 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.003s]
+12:53:26,875 root INFO Searching for the word In is Successfull
+12:53:26,875 root INFO []
+12:53:26,875 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:26] "POST /pyacademy/home HTTP/1.1" 200 -
+12:53:26,888 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:26] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:53:26,893 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:26] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+12:53:26,893 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:26] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:53:28,883 root INFO Rendering the Home Page
+12:53:28,884 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:28] "GET /pyacademy/home HTTP/1.1" 200 -
+12:53:28,900 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:28] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:53:28,901 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:53:28,901 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:28] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+12:53:32,100 root INFO Searching for the requested course
+12:53:32,110 root INFO In
+12:53:32,111 root INFO Searching for the word In
+12:53:32,114 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+12:53:32,115 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.004s]
+12:53:32,115 root INFO Searching for the word In is Successfull
+12:53:32,115 root INFO []
+12:53:32,116 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:32] "POST /pyacademy/home HTTP/1.1" 200 -
+12:53:32,134 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:32] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+12:53:32,134 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:32] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:53:32,135 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:32] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:53:33,684 root INFO Rendering the Home Page
+12:53:33,686 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:33] "GET /pyacademy/home HTTP/1.1" 200 -
+12:53:33,704 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:33] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:53:33,708 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:33] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+12:53:33,710 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:33] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:53:42,199 root INFO Searching for the requested course
+12:53:42,210 root INFO kafka
+12:53:42,210 root INFO Searching for the word kafka
+12:53:42,215 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+12:53:42,216 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.005s]
+12:53:42,216 root INFO Searching for the word kafka is Successfull
+12:53:42,216 root INFO [{'_index': 'search-courses', '_id': 'CR0003', '_score': 1.8923234, '_source': {'courseName': 'Kafka with Python', 'courseId': 'CR0003', 'url': 'https://blog.devgenius.io/kafka-with-python-4eb017b41e83', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the core concepts of Apache Kafka and write simple producer and consumer programs using python', 'id': 'd2995295-aa25-48fc-94a4-dfc50c149636', 'createdAt': '24/03/2024 01:44:05'}}]
+12:53:42,217 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:42] "POST /pyacademy/home HTTP/1.1" 200 -
+12:53:42,231 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:42] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:53:42,233 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:42] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+12:53:42,236 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:42] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:53:42,237 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:53:42] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+12:57:38,704 root INFO Rendering the Home Page
+12:57:38,705 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:38] "GET /pyacademy/home HTTP/1.1" 200 -
+12:57:38,730 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:38] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+12:57:38,731 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:38] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:57:38,731 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:38] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:57:38,741 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:38] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+12:57:48,716 root INFO Searching for the requested course
+12:57:48,716 root INFO implement
+12:57:48,717 root INFO Searching for the word implement
+12:57:48,723 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+12:57:48,723 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.006s]
+12:57:48,723 root INFO Searching for the word implement is Successfull
+12:57:48,724 root INFO [{'_index': 'search-courses', '_id': 'CR0010', '_score': 1.1228547, '_source': {'courseName': 'Implement CI / CD using Jenkins for Python Application', 'courseId': 'CR0010', 'url': 'https://blog.devgenius.io/implement-ci-cd-using-jenkins-for-python-application-91a3bcf7d91', 'duration': 45, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Jenkins and learn how to implement Continuous Integration / Continuous Delivery using Jenkins for a Python application', 'id': 'c7f68187-c42b-4e2c-8d09-df1e7bc043e5', 'createdAt': '24/03/2024 01:54:51'}}]
+12:57:48,725 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:48] "POST /pyacademy/home HTTP/1.1" 200 -
+12:57:48,741 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:48] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:57:48,745 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+12:57:48,747 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:48] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+12:57:48,747 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:48] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+12:57:48,767 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:48] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+12:57:52,574 root INFO Rendering the Home Page
+12:57:52,576 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:52] "GET /pyacademy/home HTTP/1.1" 200 -
+12:57:52,591 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:52] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+12:57:52,598 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:52] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+12:57:52,598 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 12:57:52] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+19:45:17,423 root DEBUG Connecting to Elastic DB
+19:45:17,492 root INFO Connection to Elastic DB Successfull
+19:45:17,492 root DEBUG Application Started ...
+19:45:17,518 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+19:45:17,518 werkzeug INFO [33mPress CTRL+C to quit[0m
+19:45:17,520 werkzeug INFO  * Restarting with stat
+19:45:18,122 root DEBUG Connecting to Elastic DB
+19:45:18,182 root INFO Connection to Elastic DB Successfull
+19:45:18,182 root DEBUG Application Started ...
+19:45:18,194 werkzeug WARNING  * Debugger is active!
+19:45:21,347 werkzeug INFO  * Debugger PIN: 100-133-871
+19:46:16,849 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:46:16] "GET / HTTP/1.1" 200 -
+19:46:16,911 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:46:16] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+19:46:16,912 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:46:16] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+19:46:16,914 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:46:16] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+19:46:16,915 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:46:16] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+19:46:17,149 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:46:17] "GET /swagger.json HTTP/1.1" 200 -
+19:50:06,182 root INFO Rendering the Home Page
+19:50:06,188 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:50:06] "GET /pyacademy/home HTTP/1.1" 200 -
+19:50:06,215 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:50:06] "GET /static/css/grid.css HTTP/1.1" 200 -
+19:50:06,217 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:50:06] "GET /static/css/home.css HTTP/1.1" 200 -
+19:50:06,220 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:50:06] "GET /static/images/logo.png HTTP/1.1" 200 -
+19:50:06,229 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:50:06] "GET /static/images/background.jpg HTTP/1.1" 200 -
+19:50:10,542 root INFO Searching for the requested course
+19:50:10,544 root INFO python
+19:50:10,545 root INFO Searching for the word python
+19:50:10,546 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): localhost:9200
+19:50:13,782 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+19:50:13,783 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:3.237s]
+19:50:13,783 root INFO Searching for the word python is Successfull
+19:50:13,783 root INFO [{'_index': 'search-courses', '_id': 'CR0005', '_score': 0.7359309, '_source': {'courseName': 'Logging in Python', 'courseId': 'CR0005', 'url': 'https://blog.devgenius.io/logging-in-python-adec94519755', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of logging and create a simple project that documents every event into a log file and later use this log file to analyze the errors.', 'id': 'ee83e71b-0ed3-4ec3-abdd-a91e0ff681f3', 'createdAt': '24/03/2024 01:48:17'}}, {'_index': 'search-courses', '_id': 'CR0011', '_score': 0.65585554, '_source': {'courseName': 'Build Microservices with Python', 'courseId': 'CR0011', 'url': 'https://blog.devgenius.io/build-microservices-with-python-63fd35fa3baa', 'duration': 90, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Microservices based architecture and learn how to build microservices with Python', 'id': 'ed256e05-cee1-4763-acbf-fe73c0fba9ad', 'createdAt': '24/03/2024 01:56:25'}}, {'_index': 'search-courses', '_id': 'CR0006', '_score': 0.5914959, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0006', 'url': 'https://blog.devgenius.io/getting-started-with-flask-python-cbdeca3dcfe', 'duration': 60, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of flask and create a simple web application.', 'id': '749b9ae2-be1e-49ce-ae9a-c49140ff76eb', 'createdAt': '24/03/2024 01:49:44'}}, {'_index': 'search-courses', '_id': 'CR0008', '_score': 0.53863883, '_source': {'courseName': 'Containerize a Python Application using Docker', 'courseId': 'CR0008', 'url': 'https://blog.devgenius.io/containerize-a-python-application-using-docker-f8cea56568dd', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of docker and learn how to build an image that runs a Python application in a container.', 'id': 'dbfede8a-65da-429e-9f0b-e1436355bfeb', 'createdAt': '24/03/2024 01:52:07'}}, {'_index': 'search-courses', '_id': 'CR0003', '_score': 0.0910362, '_source': {'courseName': 'Kafka with Python', 'courseId': 'CR0003', 'url': 'https://blog.devgenius.io/kafka-with-python-4eb017b41e83', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the core concepts of Apache Kafka and write simple producer and consumer programs using python', 'id': 'd2995295-aa25-48fc-94a4-dfc50c149636', 'createdAt': '24/03/2024 01:44:05'}}, {'_index': 'search-courses', '_id': 'CR0004', '_score': 0.0910362, '_source': {'courseName': 'YAML with Python', 'courseId': 'CR0004', 'url': 'https://blog.devgenius.io/yaml-with-python-d6787a9bd8ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of YAML and write a simple python script that reads configuration details from a YAML file', 'id': 'daa57560-19d3-40ec-9126-507285643deb', 'createdAt': '24/03/2024 01:45:44'}}, {'_index': 'search-courses', '_id': 'CR0013', '_score': 0.08006308, '_source': {'courseName': 'Implementing gRPC In Python', 'courseId': 'CR0013', 'url': 'https://ashishmj.medium.com/implementing-grpc-in-python-51dd6be87ec3', 'duration': 70, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of gRPC and create a simple project by building endpoints using gRPC', 'id': 'fa387a6c-aabc-4dbd-956c-ac0756009178', 'createdAt': '24/03/2024 01:58:34'}}, {'_index': 'search-courses', '_id': 'CR0007', '_score': 0.07145072, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0007', 'url': 'https://blog.devgenius.io/rest-apis-with-python-f330c7ffc6ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of REST architecture and create a simple project by building REST APIs using flask', 'id': '4e55924c-49fc-4ef7-8874-0e03359753a4', 'createdAt': '24/03/2024 01:50:46'}}, {'_index': 'search-courses', '_id': 'CR0009', '_score': 0.07145072, '_source': {'courseName': 'Deploy Python App into Kubernetes', 'courseId': 'CR0009', 'url': 'https://blog.devgenius.io/deploy-python-app-into-kubernetes-4e783dbad320', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Kubernetes/K8s and learn how to deploy a simple python service into Kubernetes', 'id': '9c1e2adb-449d-41f7-a7d9-40ec2fa6009f', 'createdAt': '24/03/2024 01:53:40'}}, {'_index': 'search-courses', '_id': 'CR0010', '_score': 0.054018468, '_source': {'courseName': 'Implement CI / CD using Jenkins for Python Application', 'courseId': 'CR0010', 'url': 'https://blog.devgenius.io/implement-ci-cd-using-jenkins-for-python-application-91a3bcf7d91', 'duration': 45, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Jenkins and learn how to implement Continuous Integration / Continuous Delivery using Jenkins for a Python application', 'id': 'c7f68187-c42b-4e2c-8d09-df1e7bc043e5', 'createdAt': '24/03/2024 01:54:51'}}]
+19:50:13,791 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:50:13] "POST /pyacademy/home HTTP/1.1" 200 -
+19:50:13,806 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:50:13] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+19:50:13,806 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:50:13] "GET /static/css/result.css HTTP/1.1" 200 -
+19:50:13,811 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:50:13] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+19:50:13,814 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:50:13] "GET /static/images/learn.jpg HTTP/1.1" 200 -
+19:50:13,821 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:50:13] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+19:50:27,678 root INFO Rendering the Home Page
+19:50:27,680 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:50:27] "GET /pyacademy/home HTTP/1.1" 200 -
+19:54:08,435 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:54:08] "GET / HTTP/1.1" 200 -
+19:54:08,459 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:54:08] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+19:54:08,461 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:54:08] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+19:54:08,462 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:54:08] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+19:54:08,465 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:54:08] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+19:54:08,610 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:54:08] "GET /swagger.json HTTP/1.1" 200 -
+19:55:30,121 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:55:30] "GET / HTTP/1.1" 200 -
+19:55:31,715 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:55:31] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+19:55:31,735 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:55:31] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+19:55:31,737 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:55:31] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+19:55:31,737 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:55:31] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+19:55:31,957 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 19:55:31] "GET /swagger.json HTTP/1.1" 200 -
+21:16:20,398 root DEBUG Connecting to Elastic DB
+21:16:20,469 root INFO Connection to Elastic DB Successfull
+21:16:20,469 root DEBUG Application Started ...
+21:16:20,493 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+21:16:20,493 werkzeug INFO [33mPress CTRL+C to quit[0m
+21:16:20,495 werkzeug INFO  * Restarting with stat
+21:16:21,209 root DEBUG Connecting to Elastic DB
+21:16:21,263 root INFO Connection to Elastic DB Successfull
+21:16:21,263 root DEBUG Application Started ...
+21:16:21,274 werkzeug WARNING  * Debugger is active!
+21:16:21,524 werkzeug INFO  * Debugger PIN: 100-133-871
+21:16:22,66 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 21:16:22] "GET / HTTP/1.1" 200 -
+21:16:22,121 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 21:16:22] "[36mGET /swaggerui/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+21:16:22,121 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 21:16:22] "[36mGET /swaggerui/droid-sans.css HTTP/1.1[0m" 304 -
+21:16:22,121 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 21:16:22] "[36mGET /swaggerui/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+21:16:22,123 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 21:16:22] "[36mGET /swaggerui/swagger-ui.css HTTP/1.1[0m" 304 -
+21:16:22,367 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 21:16:22] "GET /swagger.json HTTP/1.1" 200 -
+21:16:22,412 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 21:16:22] "[36mGET /swaggerui/favicon-32x32.png HTTP/1.1[0m" 304 -
+23:07:03,681 root INFO Rendering the Home Page
+23:07:03,695 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:03] "GET /pyacademy/home HTTP/1.1" 200 -
+23:07:03,745 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:03] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:07:03,749 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:03] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:07:03,749 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:03] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:07:03,779 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:03] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:07:10,360 root INFO Searching for the requested course
+23:07:10,366 root INFO python
+23:07:10,367 root INFO Searching for the word python
+23:07:10,370 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): localhost:9200
+23:07:11,323 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:07:11,324 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.955s]
+23:07:11,327 root INFO Searching for the word python is Successfull
+23:07:11,327 root INFO [{'_index': 'search-courses', '_id': 'CR0005', '_score': 0.7359309, '_source': {'courseName': 'Logging in Python', 'courseId': 'CR0005', 'url': 'https://blog.devgenius.io/logging-in-python-adec94519755', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of logging and create a simple project that documents every event into a log file and later use this log file to analyze the errors.', 'id': 'ee83e71b-0ed3-4ec3-abdd-a91e0ff681f3', 'createdAt': '24/03/2024 01:48:17'}}, {'_index': 'search-courses', '_id': 'CR0011', '_score': 0.65585554, '_source': {'courseName': 'Build Microservices with Python', 'courseId': 'CR0011', 'url': 'https://blog.devgenius.io/build-microservices-with-python-63fd35fa3baa', 'duration': 90, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Microservices based architecture and learn how to build microservices with Python', 'id': 'ed256e05-cee1-4763-acbf-fe73c0fba9ad', 'createdAt': '24/03/2024 01:56:25'}}, {'_index': 'search-courses', '_id': 'CR0006', '_score': 0.5914959, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0006', 'url': 'https://blog.devgenius.io/getting-started-with-flask-python-cbdeca3dcfe', 'duration': 60, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of flask and create a simple web application.', 'id': '749b9ae2-be1e-49ce-ae9a-c49140ff76eb', 'createdAt': '24/03/2024 01:49:44'}}, {'_index': 'search-courses', '_id': 'CR0008', '_score': 0.53863883, '_source': {'courseName': 'Containerize a Python Application using Docker', 'courseId': 'CR0008', 'url': 'https://blog.devgenius.io/containerize-a-python-application-using-docker-f8cea56568dd', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of docker and learn how to build an image that runs a Python application in a container.', 'id': 'dbfede8a-65da-429e-9f0b-e1436355bfeb', 'createdAt': '24/03/2024 01:52:07'}}, {'_index': 'search-courses', '_id': 'CR0003', '_score': 0.0910362, '_source': {'courseName': 'Kafka with Python', 'courseId': 'CR0003', 'url': 'https://blog.devgenius.io/kafka-with-python-4eb017b41e83', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the core concepts of Apache Kafka and write simple producer and consumer programs using python', 'id': 'd2995295-aa25-48fc-94a4-dfc50c149636', 'createdAt': '24/03/2024 01:44:05'}}, {'_index': 'search-courses', '_id': 'CR0004', '_score': 0.0910362, '_source': {'courseName': 'YAML with Python', 'courseId': 'CR0004', 'url': 'https://blog.devgenius.io/yaml-with-python-d6787a9bd8ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of YAML and write a simple python script that reads configuration details from a YAML file', 'id': 'daa57560-19d3-40ec-9126-507285643deb', 'createdAt': '24/03/2024 01:45:44'}}, {'_index': 'search-courses', '_id': 'CR0013', '_score': 0.08006308, '_source': {'courseName': 'Implementing gRPC In Python', 'courseId': 'CR0013', 'url': 'https://ashishmj.medium.com/implementing-grpc-in-python-51dd6be87ec3', 'duration': 70, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of gRPC and create a simple project by building endpoints using gRPC', 'id': 'fa387a6c-aabc-4dbd-956c-ac0756009178', 'createdAt': '24/03/2024 01:58:34'}}, {'_index': 'search-courses', '_id': 'CR0007', '_score': 0.07145072, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0007', 'url': 'https://blog.devgenius.io/rest-apis-with-python-f330c7ffc6ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of REST architecture and create a simple project by building REST APIs using flask', 'id': '4e55924c-49fc-4ef7-8874-0e03359753a4', 'createdAt': '24/03/2024 01:50:46'}}, {'_index': 'search-courses', '_id': 'CR0009', '_score': 0.07145072, '_source': {'courseName': 'Deploy Python App into Kubernetes', 'courseId': 'CR0009', 'url': 'https://blog.devgenius.io/deploy-python-app-into-kubernetes-4e783dbad320', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Kubernetes/K8s and learn how to deploy a simple python service into Kubernetes', 'id': '9c1e2adb-449d-41f7-a7d9-40ec2fa6009f', 'createdAt': '24/03/2024 01:53:40'}}, {'_index': 'search-courses', '_id': 'CR0010', '_score': 0.054018468, '_source': {'courseName': 'Implement CI / CD using Jenkins for Python Application', 'courseId': 'CR0010', 'url': 'https://blog.devgenius.io/implement-ci-cd-using-jenkins-for-python-application-91a3bcf7d91', 'duration': 45, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Jenkins and learn how to implement Continuous Integration / Continuous Delivery using Jenkins for a Python application', 'id': 'c7f68187-c42b-4e2c-8d09-df1e7bc043e5', 'createdAt': '24/03/2024 01:54:51'}}]
+23:07:11,332 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:11] "POST /pyacademy/home HTTP/1.1" 200 -
+23:07:11,344 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:11] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:07:11,349 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:11] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:07:11,352 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:11] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:07:11,352 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:11] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:07:11,359 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:11] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:07:12,928 root INFO Rendering the Home Page
+23:07:12,930 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:12] "GET /pyacademy/home HTTP/1.1" 200 -
+23:07:12,948 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:12] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:07:12,950 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:12] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:07:12,952 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:12] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:07:25,947 root INFO Searching for the requested course
+23:07:25,963 root INFO kubernetes
+23:07:25,982 root INFO Searching for the word kubernetes
+23:07:26,30 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:07:26,43 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.020s]
+23:07:26,62 root INFO Searching for the word kubernetes is Successfull
+23:07:26,62 root INFO [{'_index': 'search-courses', '_id': 'CR0009', '_score': 1.48521, '_source': {'courseName': 'Deploy Python App into Kubernetes', 'courseId': 'CR0009', 'url': 'https://blog.devgenius.io/deploy-python-app-into-kubernetes-4e783dbad320', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Kubernetes/K8s and learn how to deploy a simple python service into Kubernetes', 'id': '9c1e2adb-449d-41f7-a7d9-40ec2fa6009f', 'createdAt': '24/03/2024 01:53:40'}}]
+23:07:26,64 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:26] "POST /pyacademy/home HTTP/1.1" 200 -
+23:07:26,107 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:26] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:07:26,109 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:26] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:07:26,111 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:26] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:07:26,112 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:26] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:07:49,423 root INFO Rendering the Home Page
+23:07:49,424 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:49] "GET /pyacademy/home HTTP/1.1" 200 -
+23:07:49,446 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:49] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:07:49,447 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:49] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:07:49,447 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:49] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:07:49,473 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:07:49] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:08:48,420 root INFO Searching for the requested course
+23:08:48,421 root INFO kafka
+23:08:48,421 root INFO Searching for the word kafka
+23:08:48,427 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:08:48,427 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.005s]
+23:08:48,428 root INFO Searching for the word kafka is Successfull
+23:08:48,428 root INFO [{'_index': 'search-courses', '_id': 'CR0003', '_score': 1.8923234, '_source': {'courseName': 'Kafka with Python', 'courseId': 'CR0003', 'url': 'https://blog.devgenius.io/kafka-with-python-4eb017b41e83', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the core concepts of Apache Kafka and write simple producer and consumer programs using python', 'id': 'd2995295-aa25-48fc-94a4-dfc50c149636', 'createdAt': '24/03/2024 01:44:05'}}]
+23:08:48,428 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:08:48] "POST /pyacademy/home HTTP/1.1" 200 -
+23:08:48,445 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:08:48] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:08:48,450 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:08:48] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:08:48,451 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:08:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:08:48,453 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:08:48] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:08:48,458 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:08:48] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:08:50,672 root INFO Rendering the Home Page
+23:08:50,674 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:08:50] "GET /pyacademy/home HTTP/1.1" 200 -
+23:08:50,693 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:08:50] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:08:50,695 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:08:50] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:08:50,696 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:08:50] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:08:50,702 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:08:50] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:14:08,107 root DEBUG Connecting to Elastic DB
+23:14:08,169 root INFO Connection to Elastic DB Successfull
+23:14:08,169 root DEBUG Application Started ...
+23:14:08,196 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+23:14:08,196 werkzeug INFO [33mPress CTRL+C to quit[0m
+23:14:08,198 werkzeug INFO  * Restarting with stat
+23:14:08,777 root DEBUG Connecting to Elastic DB
+23:14:08,826 root INFO Connection to Elastic DB Successfull
+23:14:08,826 root DEBUG Application Started ...
+23:14:08,837 werkzeug WARNING  * Debugger is active!
+23:14:08,851 werkzeug INFO  * Debugger PIN: 100-133-871
+23:30:23,532 root DEBUG Connecting to Elastic DB
+23:30:23,608 root INFO Connection to Elastic DB Successfull
+23:30:23,609 root DEBUG Application Started ...
+23:30:23,638 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+23:30:23,639 werkzeug INFO [33mPress CTRL+C to quit[0m
+23:30:23,640 werkzeug INFO  * Restarting with stat
+23:30:24,830 root DEBUG Connecting to Elastic DB
+23:30:25,0 root INFO Connection to Elastic DB Successfull
+23:30:25,0 root DEBUG Application Started ...
+23:30:25,17 werkzeug WARNING  * Debugger is active!
+23:30:28,146 werkzeug INFO  * Debugger PIN: 100-133-871
+23:30:34,588 root INFO Rendering the Home Page
+23:30:34,598 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:30:34] "GET /pyacademy/home HTTP/1.1" 200 -
+23:30:34,667 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:30:34] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:30:34,667 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:30:34] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:30:34,668 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:30:34] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:30:34,677 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:30:34] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:31:25,213 root INFO Searching for the requested course
+23:31:25,216 root INFO python
+23:31:25,217 root INFO Searching for the word python
+23:31:25,218 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): localhost:9200
+23:31:25,684 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:31:25,684 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.466s]
+23:31:25,686 root INFO Searching for the word python is Successfull
+23:31:25,686 root INFO [{'_index': 'search-courses', '_id': 'CR0005', '_score': 0.7359309, '_source': {'courseName': 'Logging in Python', 'courseId': 'CR0005', 'url': 'https://blog.devgenius.io/logging-in-python-adec94519755', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of logging and create a simple project that documents every event into a log file and later use this log file to analyze the errors.', 'id': 'ee83e71b-0ed3-4ec3-abdd-a91e0ff681f3', 'createdAt': '24/03/2024 01:48:17'}}, {'_index': 'search-courses', '_id': 'CR0011', '_score': 0.65585554, '_source': {'courseName': 'Build Microservices with Python', 'courseId': 'CR0011', 'url': 'https://blog.devgenius.io/build-microservices-with-python-63fd35fa3baa', 'duration': 90, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Microservices based architecture and learn how to build microservices with Python', 'id': 'ed256e05-cee1-4763-acbf-fe73c0fba9ad', 'createdAt': '24/03/2024 01:56:25'}}, {'_index': 'search-courses', '_id': 'CR0006', '_score': 0.5914959, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0006', 'url': 'https://blog.devgenius.io/getting-started-with-flask-python-cbdeca3dcfe', 'duration': 60, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of flask and create a simple web application.', 'id': '749b9ae2-be1e-49ce-ae9a-c49140ff76eb', 'createdAt': '24/03/2024 01:49:44'}}, {'_index': 'search-courses', '_id': 'CR0008', '_score': 0.53863883, '_source': {'courseName': 'Containerize a Python Application using Docker', 'courseId': 'CR0008', 'url': 'https://blog.devgenius.io/containerize-a-python-application-using-docker-f8cea56568dd', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of docker and learn how to build an image that runs a Python application in a container.', 'id': 'dbfede8a-65da-429e-9f0b-e1436355bfeb', 'createdAt': '24/03/2024 01:52:07'}}, {'_index': 'search-courses', '_id': 'CR0003', '_score': 0.0910362, '_source': {'courseName': 'Kafka with Python', 'courseId': 'CR0003', 'url': 'https://blog.devgenius.io/kafka-with-python-4eb017b41e83', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the core concepts of Apache Kafka and write simple producer and consumer programs using python', 'id': 'd2995295-aa25-48fc-94a4-dfc50c149636', 'createdAt': '24/03/2024 01:44:05'}}, {'_index': 'search-courses', '_id': 'CR0004', '_score': 0.0910362, '_source': {'courseName': 'YAML with Python', 'courseId': 'CR0004', 'url': 'https://blog.devgenius.io/yaml-with-python-d6787a9bd8ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of YAML and write a simple python script that reads configuration details from a YAML file', 'id': 'daa57560-19d3-40ec-9126-507285643deb', 'createdAt': '24/03/2024 01:45:44'}}, {'_index': 'search-courses', '_id': 'CR0013', '_score': 0.08006308, '_source': {'courseName': 'Implementing gRPC In Python', 'courseId': 'CR0013', 'url': 'https://ashishmj.medium.com/implementing-grpc-in-python-51dd6be87ec3', 'duration': 70, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of gRPC and create a simple project by building endpoints using gRPC', 'id': 'fa387a6c-aabc-4dbd-956c-ac0756009178', 'createdAt': '24/03/2024 01:58:34'}}, {'_index': 'search-courses', '_id': 'CR0007', '_score': 0.07145072, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0007', 'url': 'https://blog.devgenius.io/rest-apis-with-python-f330c7ffc6ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of REST architecture and create a simple project by building REST APIs using flask', 'id': '4e55924c-49fc-4ef7-8874-0e03359753a4', 'createdAt': '24/03/2024 01:50:46'}}, {'_index': 'search-courses', '_id': 'CR0009', '_score': 0.07145072, '_source': {'courseName': 'Deploy Python App into Kubernetes', 'courseId': 'CR0009', 'url': 'https://blog.devgenius.io/deploy-python-app-into-kubernetes-4e783dbad320', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Kubernetes/K8s and learn how to deploy a simple python service into Kubernetes', 'id': '9c1e2adb-449d-41f7-a7d9-40ec2fa6009f', 'createdAt': '24/03/2024 01:53:40'}}, {'_index': 'search-courses', '_id': 'CR0010', '_score': 0.054018468, '_source': {'courseName': 'Implement CI / CD using Jenkins for Python Application', 'courseId': 'CR0010', 'url': 'https://blog.devgenius.io/implement-ci-cd-using-jenkins-for-python-application-91a3bcf7d91', 'duration': 45, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Jenkins and learn how to implement Continuous Integration / Continuous Delivery using Jenkins for a Python application', 'id': 'c7f68187-c42b-4e2c-8d09-df1e7bc043e5', 'createdAt': '24/03/2024 01:54:51'}}]
+23:31:25,691 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:25] "POST /pyacademy/home HTTP/1.1" 200 -
+23:31:25,705 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:25] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:31:25,707 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:25] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:31:25,708 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:25] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:31:25,710 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:25] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:31:25,717 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:25] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:31:27,332 root INFO Rendering the Home Page
+23:31:27,333 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:27] "GET /pyacademy/home HTTP/1.1" 200 -
+23:31:27,353 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:27] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:31:27,354 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:27] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:31:27,356 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:27] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:31:27,363 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:27] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:31:30,753 root INFO Searching for the requested course
+23:31:30,753 root INFO image
+23:31:30,753 root INFO Searching for the word image
+23:31:30,760 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:31:30,760 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.007s]
+23:31:30,761 root INFO Searching for the word image is Successfull
+23:31:30,761 root INFO [{'_index': 'search-courses', '_id': 'CR0001', '_score': 1.4385734, '_source': {'courseName': 'Image Editor Web Application using OpenCV', 'courseId': 'CR0001', 'url': 'https://blog.devgenius.io/snaplab-an-image-editor-web-application-59a6ec36e7e', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Computer vision is a field of study that deals with how computers can gain high-level understanding from digital images or videos', 'id': '85dc64d5-f866-4cc6-ab55-a2e2ad6e0d0a', 'createdAt': '24/03/2024 01:38:26'}}]
+23:31:30,762 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:30] "POST /pyacademy/home HTTP/1.1" 200 -
+23:31:30,779 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:30] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:31:30,783 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:30] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:31:30,784 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:30] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:31:30,786 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:31:30] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:33:47,699 root DEBUG Connecting to Elastic DB
+23:33:47,769 root INFO Connection to Elastic DB Successfull
+23:33:47,769 root DEBUG Application Started ...
+23:33:47,789 werkzeug INFO [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+23:33:47,789 werkzeug INFO [33mPress CTRL+C to quit[0m
+23:33:47,791 werkzeug INFO  * Restarting with stat
+23:33:48,612 root DEBUG Connecting to Elastic DB
+23:33:48,676 root INFO Connection to Elastic DB Successfull
+23:33:48,676 root DEBUG Application Started ...
+23:33:48,689 werkzeug WARNING  * Debugger is active!
+23:33:48,701 werkzeug INFO  * Debugger PIN: 100-133-871
+23:35:30,700 root INFO Rendering the Home Page
+23:35:30,729 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:30] "GET /pyacademy/home HTTP/1.1" 200 -
+23:35:30,768 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:30] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:35:30,770 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:30] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:35:30,770 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:30] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:35:30,778 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:30] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:35:38,750 root INFO Searching for the requested course
+23:35:38,753 root INFO kubernetes
+23:35:38,753 root INFO Searching for the word kubernetes
+23:35:38,754 urllib3.connectionpool DEBUG Starting new HTTPS connection (1): localhost:9200
+23:35:38,901 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:35:38,901 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.148s]
+23:35:38,901 root INFO Searching for the word kubernetes is Successfull
+23:35:38,901 root INFO [{'_index': 'search-courses', '_id': 'CR0009', '_score': 1.48521, '_source': {'courseName': 'Deploy Python App into Kubernetes', 'courseId': 'CR0009', 'url': 'https://blog.devgenius.io/deploy-python-app-into-kubernetes-4e783dbad320', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Kubernetes/K8s and learn how to deploy a simple python service into Kubernetes', 'id': '9c1e2adb-449d-41f7-a7d9-40ec2fa6009f', 'createdAt': '24/03/2024 01:53:40'}}]
+23:35:38,906 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:38] "POST /pyacademy/home HTTP/1.1" 200 -
+23:35:38,920 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:38] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:35:38,922 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:38] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:35:38,925 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:38] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:35:38,926 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:38] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:35:38,929 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:38] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:35:40,975 root INFO Rendering the Home Page
+23:35:40,976 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:40] "GET /pyacademy/home HTTP/1.1" 200 -
+23:35:40,999 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:40] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:35:41,2 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:41] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:35:41,3 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:41] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:35:45,868 root INFO Searching for the requested course
+23:35:45,869 root INFO Logging
+23:35:45,869 root INFO Searching for the word Logging
+23:35:45,874 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:35:45,875 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.005s]
+23:35:45,875 root INFO Searching for the word Logging is Successfull
+23:35:45,875 root INFO [{'_index': 'search-courses', '_id': 'CR0005', '_score': 2.1411328, '_source': {'courseName': 'Logging in Python', 'courseId': 'CR0005', 'url': 'https://blog.devgenius.io/logging-in-python-adec94519755', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of logging and create a simple project that documents every event into a log file and later use this log file to analyze the errors.', 'id': 'ee83e71b-0ed3-4ec3-abdd-a91e0ff681f3', 'createdAt': '24/03/2024 01:48:17'}}]
+23:35:45,875 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:45] "POST /pyacademy/home HTTP/1.1" 200 -
+23:35:45,889 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:45] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:35:45,894 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:45] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:35:45,896 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:45] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:35:45,897 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:45] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:35:51,599 root INFO Rendering the Home Page
+23:35:51,600 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:51] "GET /pyacademy/home HTTP/1.1" 200 -
+23:35:51,619 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:51] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:35:51,622 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:51] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:35:51,625 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:35:51] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:36:40,773 root INFO Searching for the requested course
+23:36:40,773 root INFO couchbase
+23:36:40,774 root INFO Searching for the word couchbase
+23:36:40,779 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:36:40,779 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.005s]
+23:36:40,779 root INFO Searching for the word couchbase is Successfull
+23:36:40,779 root INFO [{'_index': 'search-courses', '_id': 'CR0002', '_score': 1.7209104, '_source': {'courseName': 'Web scraping with Couchbase Server', 'courseId': 'CR0002', 'url': 'https://blog.devgenius.io/web-scraping-with-couchbase-server-629da1e92c43', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to outline how to store the scraped data from the web into the couchbase server in three simple steps.', 'id': '746dca53-70d6-443d-9403-5fea69014bae', 'createdAt': '24/03/2024 01:41:51'}}]
+23:36:40,780 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:36:40] "POST /pyacademy/home HTTP/1.1" 200 -
+23:36:40,796 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:36:40] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:36:40,799 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:36:40] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:36:40,802 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:36:40] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:36:40,806 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:36:40] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:36:40,810 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:36:40] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:36:43,793 root INFO Rendering the Home Page
+23:36:43,794 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:36:43] "GET /pyacademy/home HTTP/1.1" 200 -
+23:36:43,805 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:36:43] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:36:43,813 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:36:43] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:36:43,813 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:36:43] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:37:03,991 root INFO Searching for the requested course
+23:37:04,5 root INFO grpc
+23:37:04,5 root INFO Searching for the word grpc
+23:37:04,10 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:37:04,10 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.005s]
+23:37:04,10 root INFO Searching for the word grpc is Successfull
+23:37:04,10 root INFO [{'_index': 'search-courses', '_id': 'CR0013', '_score': 1.6642307, '_source': {'courseName': 'Implementing gRPC In Python', 'courseId': 'CR0013', 'url': 'https://ashishmj.medium.com/implementing-grpc-in-python-51dd6be87ec3', 'duration': 70, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of gRPC and create a simple project by building endpoints using gRPC', 'id': 'fa387a6c-aabc-4dbd-956c-ac0756009178', 'createdAt': '24/03/2024 01:58:34'}}]
+23:37:04,11 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:04] "POST /pyacademy/home HTTP/1.1" 200 -
+23:37:04,25 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:04] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:37:04,26 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:04] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:37:04,27 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:04] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:37:04,29 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:04] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:37:06,492 root INFO Rendering the Home Page
+23:37:06,493 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:06] "GET /pyacademy/home HTTP/1.1" 200 -
+23:37:06,515 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:06] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:37:06,516 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:06] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:37:06,517 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:06] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:37:11,47 root INFO Searching for the requested course
+23:37:11,48 root INFO Rest
+23:37:11,48 root INFO Searching for the word Rest
+23:37:11,54 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:37:11,54 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.005s]
+23:37:11,54 root INFO Searching for the word Rest is Successfull
+23:37:11,54 root INFO [{'_index': 'search-courses', '_id': 'CR0012', '_score': 1.4385734, '_source': {'courseName': 'REST APIs in Go using Gorilla Mux', 'courseId': 'CR0012', 'url': 'https://blog.devgenius.io/rest-apis-in-go-using-gorilla-mux-01fab932c5a0', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of REST architecture and create a simple project by building REST APIs using Gorilla mux', 'id': '3764a101-894a-4447-9689-9ad136ab3801', 'createdAt': '24/03/2024 01:57:29'}}]
+23:37:11,55 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:11] "POST /pyacademy/home HTTP/1.1" 200 -
+23:37:11,70 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:11] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:37:11,74 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:11] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:37:11,76 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:11] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:37:11,77 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:11] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:37:11,83 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:11] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:37:15,338 root INFO Rendering the Home Page
+23:37:15,339 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:15] "GET /pyacademy/home HTTP/1.1" 200 -
+23:37:15,360 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:15] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:37:15,360 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:15] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:37:15,362 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:15] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:37:15,369 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:15] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:37:19,407 root INFO Searching for the requested course
+23:37:19,421 root INFO Flask
+23:37:19,422 root INFO Searching for the word Flask
+23:37:19,427 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:37:19,442 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.020s]
+23:37:19,442 root INFO Searching for the word Flask is Successfull
+23:37:19,442 root INFO [{'_index': 'search-courses', '_id': 'CR0006', '_score': 1.7209104, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0006', 'url': 'https://blog.devgenius.io/getting-started-with-flask-python-cbdeca3dcfe', 'duration': 60, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of flask and create a simple web application.', 'id': '749b9ae2-be1e-49ce-ae9a-c49140ff76eb', 'createdAt': '24/03/2024 01:49:44'}}, {'_index': 'search-courses', '_id': 'CR0007', '_score': 1.48521, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0007', 'url': 'https://blog.devgenius.io/rest-apis-with-python-f330c7ffc6ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of REST architecture and create a simple project by building REST APIs using flask', 'id': '4e55924c-49fc-4ef7-8874-0e03359753a4', 'createdAt': '24/03/2024 01:50:46'}}]
+23:37:19,443 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:19] "POST /pyacademy/home HTTP/1.1" 200 -
+23:37:19,457 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:19] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:37:19,460 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:19] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:37:19,462 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:19] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:37:19,468 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:19] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:37:19,468 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:37:19] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:39:28,96 root INFO Rendering the Home Page
+23:39:28,107 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:28] "GET /pyacademy/home HTTP/1.1" 200 -
+23:39:28,124 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:28] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:39:28,125 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:39:28,126 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:28] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:39:28,141 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:28] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:39:37,50 root INFO Searching for the requested course
+23:39:37,51 root INFO Kubernetes
+23:39:37,51 root INFO Searching for the word Kubernetes
+23:39:37,59 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:39:37,60 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.009s]
+23:39:37,60 root INFO Searching for the word Kubernetes is Successfull
+23:39:37,61 root INFO [{'_index': 'search-courses', '_id': 'CR0009', '_score': 1.48521, '_source': {'courseName': 'Deploy Python App into Kubernetes', 'courseId': 'CR0009', 'url': 'https://blog.devgenius.io/deploy-python-app-into-kubernetes-4e783dbad320', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Kubernetes/K8s and learn how to deploy a simple python service into Kubernetes', 'id': '9c1e2adb-449d-41f7-a7d9-40ec2fa6009f', 'createdAt': '24/03/2024 01:53:40'}}]
+23:39:37,61 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:37] "POST /pyacademy/home HTTP/1.1" 200 -
+23:39:37,80 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:37] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:39:37,80 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:37] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:39:37,81 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:37] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:39:37,81 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:39:37,90 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:37] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+23:39:39,180 root INFO Rendering the Home Page
+23:39:39,181 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:39] "GET /pyacademy/home HTTP/1.1" 200 -
+23:39:39,201 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:39] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:39:39,203 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:39] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:39:39,204 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:39:42,895 root INFO Searching for the requested course
+23:39:42,896 root INFO Python
+23:39:42,896 root INFO Searching for the word Python
+23:39:42,903 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:39:42,903 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.006s]
+23:39:42,903 root INFO Searching for the word Python is Successfull
+23:39:42,903 root INFO [{'_index': 'search-courses', '_id': 'CR0005', '_score': 0.7359309, '_source': {'courseName': 'Logging in Python', 'courseId': 'CR0005', 'url': 'https://blog.devgenius.io/logging-in-python-adec94519755', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of logging and create a simple project that documents every event into a log file and later use this log file to analyze the errors.', 'id': 'ee83e71b-0ed3-4ec3-abdd-a91e0ff681f3', 'createdAt': '24/03/2024 01:48:17'}}, {'_index': 'search-courses', '_id': 'CR0011', '_score': 0.65585554, '_source': {'courseName': 'Build Microservices with Python', 'courseId': 'CR0011', 'url': 'https://blog.devgenius.io/build-microservices-with-python-63fd35fa3baa', 'duration': 90, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Microservices based architecture and learn how to build microservices with Python', 'id': 'ed256e05-cee1-4763-acbf-fe73c0fba9ad', 'createdAt': '24/03/2024 01:56:25'}}, {'_index': 'search-courses', '_id': 'CR0006', '_score': 0.5914959, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0006', 'url': 'https://blog.devgenius.io/getting-started-with-flask-python-cbdeca3dcfe', 'duration': 60, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of flask and create a simple web application.', 'id': '749b9ae2-be1e-49ce-ae9a-c49140ff76eb', 'createdAt': '24/03/2024 01:49:44'}}, {'_index': 'search-courses', '_id': 'CR0008', '_score': 0.53863883, '_source': {'courseName': 'Containerize a Python Application using Docker', 'courseId': 'CR0008', 'url': 'https://blog.devgenius.io/containerize-a-python-application-using-docker-f8cea56568dd', 'duration': 50, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of docker and learn how to build an image that runs a Python application in a container.', 'id': 'dbfede8a-65da-429e-9f0b-e1436355bfeb', 'createdAt': '24/03/2024 01:52:07'}}, {'_index': 'search-courses', '_id': 'CR0003', '_score': 0.0910362, '_source': {'courseName': 'Kafka with Python', 'courseId': 'CR0003', 'url': 'https://blog.devgenius.io/kafka-with-python-4eb017b41e83', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the core concepts of Apache Kafka and write simple producer and consumer programs using python', 'id': 'd2995295-aa25-48fc-94a4-dfc50c149636', 'createdAt': '24/03/2024 01:44:05'}}, {'_index': 'search-courses', '_id': 'CR0004', '_score': 0.0910362, '_source': {'courseName': 'YAML with Python', 'courseId': 'CR0004', 'url': 'https://blog.devgenius.io/yaml-with-python-d6787a9bd8ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the basics of YAML and write a simple python script that reads configuration details from a YAML file', 'id': 'daa57560-19d3-40ec-9126-507285643deb', 'createdAt': '24/03/2024 01:45:44'}}, {'_index': 'search-courses', '_id': 'CR0013', '_score': 0.08006308, '_source': {'courseName': 'Implementing gRPC In Python', 'courseId': 'CR0013', 'url': 'https://ashishmj.medium.com/implementing-grpc-in-python-51dd6be87ec3', 'duration': 70, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of gRPC and create a simple project by building endpoints using gRPC', 'id': 'fa387a6c-aabc-4dbd-956c-ac0756009178', 'createdAt': '24/03/2024 01:58:34'}}, {'_index': 'search-courses', '_id': 'CR0007', '_score': 0.07145072, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0007', 'url': 'https://blog.devgenius.io/rest-apis-with-python-f330c7ffc6ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of REST architecture and create a simple project by building REST APIs using flask', 'id': '4e55924c-49fc-4ef7-8874-0e03359753a4', 'createdAt': '24/03/2024 01:50:46'}}, {'_index': 'search-courses', '_id': 'CR0009', '_score': 0.07145072, '_source': {'courseName': 'Deploy Python App into Kubernetes', 'courseId': 'CR0009', 'url': 'https://blog.devgenius.io/deploy-python-app-into-kubernetes-4e783dbad320', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Kubernetes/K8s and learn how to deploy a simple python service into Kubernetes', 'id': '9c1e2adb-449d-41f7-a7d9-40ec2fa6009f', 'createdAt': '24/03/2024 01:53:40'}}, {'_index': 'search-courses', '_id': 'CR0010', '_score': 0.054018468, '_source': {'courseName': 'Implement CI / CD using Jenkins for Python Application', 'courseId': 'CR0010', 'url': 'https://blog.devgenius.io/implement-ci-cd-using-jenkins-for-python-application-91a3bcf7d91', 'duration': 45, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of Jenkins and learn how to implement Continuous Integration / Continuous Delivery using Jenkins for a Python application', 'id': 'c7f68187-c42b-4e2c-8d09-df1e7bc043e5', 'createdAt': '24/03/2024 01:54:51'}}]
+23:39:42,904 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:42] "POST /pyacademy/home HTTP/1.1" 200 -
+23:39:42,917 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:42] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:39:42,918 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:42] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:39:42,922 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:42] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:39:42,923 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:42] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:39:44,624 root INFO Rendering the Home Page
+23:39:44,625 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:44] "GET /pyacademy/home HTTP/1.1" 200 -
+23:39:44,646 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:44] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:39:44,648 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:39:44,649 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:44] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:39:48,822 root INFO Searching for the requested course
+23:39:48,822 root INFO Flask
+23:39:48,823 root INFO Searching for the word Flask
+23:39:48,830 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:39:48,830 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.007s]
+23:39:48,830 root INFO Searching for the word Flask is Successfull
+23:39:48,830 root INFO [{'_index': 'search-courses', '_id': 'CR0006', '_score': 1.7209104, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0006', 'url': 'https://blog.devgenius.io/getting-started-with-flask-python-cbdeca3dcfe', 'duration': 60, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of flask and create a simple web application.', 'id': '749b9ae2-be1e-49ce-ae9a-c49140ff76eb', 'createdAt': '24/03/2024 01:49:44'}}, {'_index': 'search-courses', '_id': 'CR0007', '_score': 1.48521, '_source': {'courseName': 'Getting Started with Flask — Python', 'courseId': 'CR0007', 'url': 'https://blog.devgenius.io/rest-apis-with-python-f330c7ffc6ab', 'duration': 40, 'author': 'Ashish MJ', 'description': 'Course aims to outline the basics of REST architecture and create a simple project by building REST APIs using flask', 'id': '4e55924c-49fc-4ef7-8874-0e03359753a4', 'createdAt': '24/03/2024 01:50:46'}}]
+23:39:48,831 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:48] "POST /pyacademy/home HTTP/1.1" 200 -
+23:39:48,845 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:48] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:39:48,846 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:48] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:39:48,852 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:39:48,853 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:48] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:39:50,849 root INFO Rendering the Home Page
+23:39:50,850 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:50] "GET /pyacademy/home HTTP/1.1" 200 -
+23:39:50,870 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:50] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:39:50,871 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:50] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:39:50,872 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:50] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:39:56,91 root INFO Searching for the requested course
+23:39:56,91 root INFO kafka
+23:39:56,91 root INFO Searching for the word kafka
+23:39:56,95 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:39:56,96 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.004s]
+23:39:56,96 root INFO Searching for the word kafka is Successfull
+23:39:56,96 root INFO [{'_index': 'search-courses', '_id': 'CR0003', '_score': 1.8923234, '_source': {'courseName': 'Kafka with Python', 'courseId': 'CR0003', 'url': 'https://blog.devgenius.io/kafka-with-python-4eb017b41e83', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the core concepts of Apache Kafka and write simple producer and consumer programs using python', 'id': 'd2995295-aa25-48fc-94a4-dfc50c149636', 'createdAt': '24/03/2024 01:44:05'}}]
+23:39:56,97 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:56] "POST /pyacademy/home HTTP/1.1" 200 -
+23:39:56,115 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:56] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:39:56,116 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:56] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:39:56,121 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:56] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:39:56,121 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:56] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:39:57,607 root INFO Rendering the Home Page
+23:39:57,622 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:57] "GET /pyacademy/home HTTP/1.1" 200 -
+23:39:57,642 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:57] "[36mGET /static/css/home.css HTTP/1.1[0m" 304 -
+23:39:57,643 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:57] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:39:57,644 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:39:57] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:40:00,649 root INFO Searching for the requested course
+23:40:00,649 root INFO kafka
+23:40:00,649 root INFO Searching for the word kafka
+23:40:00,655 urllib3.connectionpool DEBUG https://localhost:9200 "POST /search-courses/_search HTTP/1.1" 200 None
+23:40:00,656 elastic_transport.transport INFO POST https://localhost:9200/search-courses/_search [status:200 duration:0.006s]
+23:40:00,656 root INFO Searching for the word kafka is Successfull
+23:40:00,656 root INFO [{'_index': 'search-courses', '_id': 'CR0003', '_score': 1.8923234, '_source': {'courseName': 'Kafka with Python', 'courseId': 'CR0003', 'url': 'https://blog.devgenius.io/kafka-with-python-4eb017b41e83', 'duration': 30, 'author': 'Ashish MJ', 'description': 'Course aims to to outline the core concepts of Apache Kafka and write simple producer and consumer programs using python', 'id': 'd2995295-aa25-48fc-94a4-dfc50c149636', 'createdAt': '24/03/2024 01:44:05'}}]
+23:40:00,657 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:40:00] "POST /pyacademy/home HTTP/1.1" 200 -
+23:40:00,673 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:40:00] "[36mGET /static/css/grid.css HTTP/1.1[0m" 304 -
+23:40:00,676 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:40:00] "[36mGET /static/css/result.css HTTP/1.1[0m" 304 -
+23:40:00,679 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:40:00] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+23:40:00,682 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:40:00] "[36mGET /static/images/learn.jpg HTTP/1.1[0m" 304 -
+23:40:00,685 werkzeug INFO 127.0.0.1 - - [24/Mar/2024 23:40:00] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
